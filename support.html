@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>SheetCopilot ToS</title>
+    <title>SheetCopilot support</title>
 
     <meta name="description" content="SheetCopilot: Bringing Software Productivity to the Next Level through Large Language Models">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,43 +48,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
     
     <script src="js/app.js"></script>
-    <script>
 
-        timeoutIds = [];
-        
-        function populateDemo(imgs) {
-            // Get the expanded image
-            var expandImg = document.getElementById("expandedImg");
-            // Get the image text
-            var imgText = document.getElementById("imgtext");
-            var answer = document.getElementById("answer");
-        
-            // Use the same src in the expanded image as the image being clicked on from the grid
-            expandImg.src = imgs.src;
-            // Use the value of the alt attribute of the clickable image as text inside the expanded image
-            var qa = imgs.alt.split("[sep]");
-            imgText.innerHTML = qa[0];
-            answer.innerHTML = "";
-            // Show the container element (hidden with CSS)
-            expandImg.parentElement.style.display = "block";
-            for (timeoutId of timeoutIds) {
-                clearTimeout(timeoutId);
-            }
-            typeWriter(qa[1], 0, qa[0]);
-            }
-        
-        function typeWriter(txt, i, q) {
-            var imgText = document.getElementById("imgtext");
-            if (imgText.innerHTML == q) {
-            if (i < txt.length) {
-                document.getElementById("answer").innerHTML += txt.charAt(i);
-                i++;
-                timeoutIds.push(setTimeout(typeWriter, 20, txt, i, q));
-            }
-            }
-        }
-
-        </script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-52J0PM8XKV"></script>
 <script>
@@ -111,26 +75,19 @@
 <body>
     <div class="container" id="main">
         <div class="col-md-8 col-md-offset-2">
-            <h3>
-                Application Terms of Service
-            </h3>
+            <h2>
+                Support Center
+            </h2>
+            <h4>Have questions? Search through our support Center.</h4>
+            
+            <h3>Getting started</h3>
+            <h4>Installing SheetCopilot from the Google Workspace Marketplace</h4>
+            <p>1. Install from the Google Workspace Marketplace</p>
+            <p>The SheetCopilot add-on can be found in the Google Marketplace here. Go to the listing and, while logged into the Google account you wish to utilize SheetCopilot from, click the install button.</p>
+            <p>Next you will be prompted to grant SheetCopilot the permissions required for it to run.</p>
+            <p>We take great care in only asking for the necessary permissions and do not collect or store any information not essential in running the service. You can view our <a href="./privacy_policy.html">policy</a> and <a href="./terms-of-service.html">terms of service</a> if you wish to understand more about how we use your data.</p>
 
-            <p class="text-justify"> Welcome to SheetCopilot, a Google Sheets add-on that uses the OpenAI API to manipulate the content of your spreadsheet. By using our app, you agree to the following terms:</p>
-            
-            <p class="text-justify"> <b>Use of Our App.</b> You agree to use our app in accordance with all applicable laws and regulations. You agree not to use our app for any unlawful or unauthorized purpose, such as infringing on someone else's intellectual property rights or violating their privacy.</p>
-            
-            <p class="text-justify"> <b>Data Collected.</b> Our app accesses part of the data from the spreadsheet that you are using SheetCopilot on. This data includes column headers, the numbers of sheets and rows, and the properties of all chart. This data is only used for the purpose of sending it to the OpenAI API and manipulating it according to the response we receive. Please see this video for how SheetCopilot uses your data: <a href="index.html#interaction">Google sheets add-on demo</a>.</p>
-            
-            <p class="text-justify"> <b>OpenAI API.</b> Our app uses the OpenAI API to generate responses that represents a solution describing how to manipulate the content of your spreadsheet by following your instruction typed in the dialog window. You agree to use the OpenAI API in accordance with their terms of service, which you can find here: <a href=https://openai.com/policies/terms-of-use/>https://openai.com/policies/terms-of-use/</a>.</p>
-            
-            <p class="text-justify"> <b>No Warranty and Liability Limitation.</b> Our app is provided as-is, without any warranty, express or implied. We shall not be liable for any damages arising out of or in connection with the use of our app, including any direct, indirect, incidental, consequential, or punitive damages.</p>
-            
-            <p class="text-justify"> <b>Changes to Terms.</b> We may update these terms of service from time to time. By continuing to use our app, you agree to be bound by the updated terms of service.</p>
-            
-            <p class="text-justify"> By using our app, you agree to these terms of service. If you do not agree to these terms, you should not use our app.</p>
-            
-            <br>
-            <p>Back to the <a href="index.html">Home Page</a>.</p>
+            <p>...</p>
         </div>
     </div>
     <script>
