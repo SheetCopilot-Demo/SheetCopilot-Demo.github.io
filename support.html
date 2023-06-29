@@ -61,19 +61,21 @@
   gtag('config', 'G-52J0PM8XKV');
 
   function submitForm() {
-    $("#myForm").ajaxSubmit({
-        type: 'post',
-        url: 'http://175.45.13.118:8080/submit',
-        data: $(this).serialize(),
-        dataType: 'json',
-        success: function(data) {
-            alert("Submitted successfully!");
-            $("#myForm").resetForm();
-        },
-        // error: function(data) {
-        //     alert(JSON.stringify(data));
-        // }
-    });
+    alert("Submitted successfully!");
+    $("#myForm").resetForm();
+    // $("#myForm").ajaxSubmit({
+    //     type: 'post',
+    //     url: 'http://175.45.13.118:8080/submit',
+    //     data: $(this).serialize(),
+    //     dataType: 'json',
+    //     success: function(data) {
+    //         alert("Submitted successfully!");
+    //         $("#myForm").resetForm();
+    //     },
+    //     // error: function(data) {
+    //     //     alert(JSON.stringify(data));
+    //     // }
+    // });
     return false;
   }
 
